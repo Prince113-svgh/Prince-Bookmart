@@ -1,0 +1,830 @@
+cs/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+}
+
+/* Header Styling */
+header {
+  width: 90%;
+  padding: 18px 50px;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+.logo span {
+  color: #e50914; /* Pizza Hut Red */
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #dcdcdc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e50914;
+}
+
+/* Order Now Button */
+.order-btn {
+  padding: 10px 30px;
+  background: #e50914;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #b20710;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  width: 35px;
+  height: 25px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* Responsive CSS */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .order-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  padding: 140px 50px 70px;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* Center content */
+  text-align: center;        /* Center text */
+}
+
+/* Left Text Area */
+.hero-content {
+  max-width: 650px;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 55px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: orange;
+}
+
+.hero-content p {
+  margin-top: 18px;
+  font-size: 18px;
+  color: white;
+  line-height: 1.6;
+}
+
+.hero-btns {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Buttons */
+.btn.order {
+  background: #e50914;
+  color: #fff;
+}
+
+.btn.order:hover {
+  background: #b20710;
+}
+
+.btn.view {
+  border: 2px solid #e50914;
+  color: #e50914;
+}
+
+.btn.view:hover {
+  background: #e50914;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .hero {
+    padding: 120px 20px 70px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+}
+ 
+
+/* TRENDING PIZZAS SECTION */
+.trending {
+  padding: 80px 50px;
+  background: #0d0d0d;
+  text-align: center;
+  color: #fff;
+}
+
+.trending h2 {
+  font-size: 38px;
+  margin-bottom: 40px;
+  color: greenyellow;
+}
+
+/* Pizza Grid */
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+/* Pizza Cards */
+.pizza-card {
+  background: #111;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #222;
+}
+
+.pizza-card:hover {
+  transform: translateY(-10px);
+  background: #181818;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+}
+
+.pizza-card img {
+  width: 180px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px #e5091460);
+}
+
+.pizza-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.pizza-card p {
+  color: #cccccc;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #e50914;
+  margin: 10px 0;
+}
+
+/* Add to Cart Button */
+.add-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #e50914;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #b20710;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .trending {
+    padding: 60px 20px;
+  }
+
+  .pizza-card img {
+    width: 150px;
+  }
+}
+
+/* WHY CHOOSE US SECTION */
+.why-us {
+  padding: 80px 50px;
+  background: #0d0d0d;
+  text-align: center;
+  color: #fff;
+}
+
+.why-us h2 {
+  font-size: 38px;
+  color: #e50914;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+/* Cards */
+.why-card {
+  background: #111;
+  padding: 35px 25px;
+  border-radius: 15px;
+  border: 1px solid #222;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  background: #181818;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+}
+
+/* Icons */
+.icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px #e5091470);
+}
+
+/* Text */
+.why-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.why-card p {
+  font-size: 15px;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .why-us {
+    padding: 60px 20px;
+  }
+
+  .icon {
+    font-size: 42px;
+  }
+}
+
+
+/* SPECIAL DEALS / OFFERS SECTION */
+.deals {
+  padding: 80px 50px;
+  background: #0d0d0d;
+  text-align: center;
+  color: #fff;
+}
+
+.deals h2 {
+  font-size: 38px;
+  color: #e50914;
+  margin-bottom: 50px;
+}
+
+/* Deals Grid */
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+/* Deal Card */
+.deal-card {
+  background: #111;
+  padding: 30px 25px;
+  border-radius: 15px;
+  position: relative;
+  border: 1px solid #222;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.deal-card:hover {
+  transform: translateY(-10px);
+  background: #181818;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+}
+
+/* Discount Badge */
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #e50914;
+  padding: 8px 14px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Deal Image */
+.deal-card img {
+  width: 200px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 12px #e5091470);
+}
+
+/* Card Text */
+.deal-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.deal-card p {
+  color: #d0d0d0;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Deal Button */
+.deal-btn {
+  display: inline-block;
+  background: #e50914;
+  padding: 10px 18px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.deal-btn:hover {
+  background: #b20710;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .deals {
+    padding: 60px 20px;
+  }
+
+  .deal-card img {
+    width: 160px;
+  }
+}
+
+/* POPULAR CATEGORIES SECTION */
+.categories {
+  padding: 80px 50px;
+  background: #0d0d0d;
+  text-align: center;
+  color: #fff;
+}
+
+.categories h2 {
+  font-size: 38px;
+  color: #e50914;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 35px;
+  justify-items: center;
+}
+
+/* Category Card */
+.cat-card {
+  background: #111;
+  width: 180px;
+  padding: 25px 15px;
+  border-radius: 15px;
+  border: 1px solid #222;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.cat-card:hover {
+  transform: translateY(-10px);
+  background: #181818;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+}
+
+/* Icon Circle */
+.cat-icon {
+  width: 90px;
+  height: 90px;
+  background: #1a1a1a;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e50914;
+  transition: 0.3s;
+}
+
+.cat-card:hover .cat-icon {
+  background: #e50914;
+  border-color: #fff;
+}
+
+/* Icon Image */
+.cat-icon img {
+  width: 55px;
+  filter: drop-shadow(0 0 8px #e5091480);
+}
+
+/* Category Text */
+.cat-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .categories {
+    padding: 60px 20px;
+  }
+
+  .cat-card {
+    width: 160px;
+  }
+
+  .cat-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cat-icon img {
+    width: 48px;
+  }
+}
+
+/* ⭐ Customer Reviews Section */
+.reviews-section {
+    background: #0f0f0f;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #ffcc66;
+}
+
+.reviews-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.review-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s ease;
+    border: 1px solid #333;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 200, 50, 0.1);
+}
+
+.stars {
+    color: #ffcc00;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.reviewer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffcc00;
+}
+
+.reviewer h4 {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* ⭐ Delivery Location Search Section */
+.location-section {
+    background: #0e0e0e;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.location-title {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    color: #ffcc66;
+}
+
+.location-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    color: #cccccc;
+}
+
+.location-search-box {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 12px;
+    border-radius: 50px;
+    border: 1px solid #333;
+    gap: 10px;
+}
+
+.location-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.location-input::placeholder {
+    color: #888888;
+}
+
+.location-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.location-btn:hover {
+    background: #ffdb4d;
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(255, 220, 50, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .location-search-box {
+        width: 85%;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    .location-btn {
+        width: 100%;
+    }
+}
+
+/* ⭐ Newsletter Section */
+.newsletter-section {
+    background: #0d0d0d;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.newsletter-title {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    color: #ffcc66;
+}
+
+.newsletter-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    color: #bbbbbb;
+}
+
+.newsletter-box {
+    width: 60%;
+    margin: auto;
+    background: #1a1a1a;
+    padding: 14px;
+    border-radius: 50px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.newsletter-input::placeholder {
+    color: #888;
+}
+
+.newsletter-btn {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 50px;
+    background: #ffcc00;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background: #ffe066;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255, 220, 50, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .newsletter-box {
+        width: 85%;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .newsletter-btn {
+        width: 100%;
+    }
+}
+
+/* ⭐ Footer Section */
+.footer {
+    background: #0a0a0a;
+    padding: 60px 0 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    color: #ffcc66;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.footer-col p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin: 8px 0;
+    color: #bbbbbb;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #bbbbbb;
+    transition: 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Social Icons */
+.social-icons a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #fff;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #888;
+    font-size: 0.95rem;
+}
+
